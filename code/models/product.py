@@ -8,3 +8,4 @@ class Product:
 
     def get_name(self):
         return self._name
+
