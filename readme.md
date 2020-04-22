@@ -9,3 +9,7 @@ If more that 30 products , 30 percent
 
 Step 3:
 If user is type special, give additional 5 percent.
+
+
+Step 4:
+Introduce buy 2 get one.
