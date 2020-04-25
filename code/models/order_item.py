@@ -1,3 +1,8 @@
+from math import floor
+
+from code.services.discount_factory import DiscountFactory
+
+
 class OrderItem:
     def __init__(self, product, quantity, user_type=None):
         self._product = product
@@ -7,11 +12,19 @@ class OrderItem:
     def get_price(self):
         return self._product.get_price() * self._quantity
 
-    def get_discounted_price(self):
-        if self._quantity > 10:
-            price = self.get_price() * 0.9
-        else:
-            price = self.get_price()
-        if self._user_type == "special":
-            price = price * 0.95
+    def get_product_price(self):
+        return self._product.get_price()
+
+    def get_quantity(self):
+        return self._quantity
+
+    def get_user_type(self):
+        return self._user_type
+
+    def get_discounted_price(self, list_of_discount_type):
+        price = self.get_price()
+        for discount in list_of_discount_type:
+            new_price = DiscountFactory(self, discount).get_factory().get_discounted_price(price)
+            print(price, new_price)
+            price = new_price
         return price

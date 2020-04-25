@@ -11,4 +11,7 @@ Step 3:
 If user is type special, give additional 5 percent.
 
 Step 4:
-Introduce buy 2 get one.
+Introduce buy 3 get at price of 2. Ask from client - (Every multiple of 2)
+
+Step 5:
+Multiple discounts should be applicable
